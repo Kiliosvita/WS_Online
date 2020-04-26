@@ -10,14 +10,32 @@ using System.Windows.Forms;
 
 namespace Shuffle_2
 {
-    public class Hand:Card
+    public class Hand
     {
-        public int handID { get; set; }
-        public Image handPic { get; set; }
-        public List<Card> theHand { get; set; }
-        public Hand(int ID, Image Pic) : base(ID, Pic)
-        {
-            theHand = new List<Card>();
+        public List<Card> cards { get; set; }
+        public int cardsleft;
+        public Hand()
+        { 
+            cards = new List<Card>();
+            cardsleft = 0;
         }
+
+        public void insertCards(List<Card> cardsToInsert)
+        {
+            foreach (Card cardToInsert in cardsToInsert)
+            {
+                cards.Add(cardToInsert);
+                cardsleft += 1;
+            }
+        }
+
+        public void insertCard(Card cardToInsert)
+        {
+            cards.Add(cardToInsert);
+            cardsleft += 1;
+        }
+
+        
+
     }
 }

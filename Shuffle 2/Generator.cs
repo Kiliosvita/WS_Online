@@ -15,7 +15,7 @@ namespace Shuffle_2
         //setup lists to store values
 
         public static readonly List<Card> allCards = new List<Card>();
-        public static readonly List<Deckcards> allDecks = new List<Deckcards>();
+        //public static readonly List<Deckcards> allDecks = new List<Deckcards>();
         public static readonly List<Card> theHand = new List<Card>();
 
         //Since deck is a child class of card, it needs an image parameter 
@@ -37,11 +37,31 @@ namespace Shuffle_2
 
         static Generator()
         {
-            printCards();
-            buildDeck();
+            //printCards();
+            //buildDeck();
         }
 
-        private static void printCards()
+        public static Deck buildNewDeck()
+        {
+            Deck aDeck = new Deck();
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._01));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._02));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._03));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._04));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._05));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._06));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._07));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._08));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._09));
+            aDeck.insertCard(new Card( Shuffle_2.Properties.Resources._10));
+            return aDeck;
+        }
+
+        public static Hand buildNewHand()
+        {
+            return new Hand();
+        }
+/*        private static void printCards()
         {
             //There will 100% be a better way to do this but shut up 
             allCards.Add(new Card(Card01, Shuffle_2.Properties.Resources._01));
@@ -55,9 +75,9 @@ namespace Shuffle_2
             allCards.Add(new Card(Card09, Shuffle_2.Properties.Resources._09));
             allCards.Add(new Card(Card10, Shuffle_2.Properties.Resources._10));
             
-        }
+        }*/
 
-        private static void buildDeck()
+ /*       private static void buildDeck()
         {
             //bring all cards to deck
             Deckcards deck01 = new Deckcards(player1_deck, cardback);
@@ -75,10 +95,10 @@ namespace Shuffle_2
             deck01.deck.Add(new Deckcards(Card10, Shuffle_2.Properties.Resources._10));
 
             allDecks.Add(deck01);
-        }
+        }*/
 
         //Find card by ID
-        public static Card cardbyID(int id)
+/*        public static Card cardbyID(int id)
         {
             foreach(Card acard in allCards)
             {
@@ -88,12 +108,12 @@ namespace Shuffle_2
                 }
             }
          return null;
-        }
+        }*/
 
         //Find deck by ID
-        public static Deckcards PlayerDeck(int deckID)
+/*        public static Deckcards PlayerDeck(int deckID)
         {
-            foreach(Deckcards finddeck in allDecks)
+           foreach(Deckcards finddeck in allDecks)
             {
                 if(finddeck.ID == deckID)
                 {
@@ -101,10 +121,10 @@ namespace Shuffle_2
                 }
             }
             return null;
-        }
+        }*/
 
         //Find card by Image
-        public static Card imgofcard(Image cardImage)
+/*        public static Card imgofcard(Image cardImage)
         {
             foreach (Card imgofcard in allCards)
             {
@@ -114,7 +134,8 @@ namespace Shuffle_2
                 }
             }
             return null;
-        }
+        }*/
 
     }
 }
+
