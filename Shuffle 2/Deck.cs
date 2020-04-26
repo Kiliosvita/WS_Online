@@ -10,14 +10,58 @@ using System.Windows.Forms;
 
 namespace Shuffle_2
 {
-    public class Deckcards : Card
+    public class Deck
     {
-        public int deckID { get; set; }
-        public Image deckPic { get; set; }
-        public List<Deckcards> deck { get; set; }
-        public Deckcards(int ID, Image Pic) : base(ID, Pic)
+        private const int maxSize = 50;
+        private List<Card> cards;
+
+        public Deck()
         {
-            deck = new List<Deckcards>();
+            cards = new List<Card>();
+        }
+
+        public int getCardsleft()
+        {
+            return cards.Count;
+        }
+
+        public List<Card> getCards()
+        {
+            return cards;
+        }
+
+        public void insertCards(List<Card> cardsToInsert)
+        {
+            foreach(Card cardToInsert in cardsToInsert)
+            {
+                cards.Add(cardToInsert);
+            }
+        }
+
+        public void insertCard(Card cardToInsert)
+        {
+            cards.Add(cardToInsert);
+        }
+
+        public Card draw()
+        {
+            Card theCard = cards[getCardsleft()-1];
+            cards.RemoveAt(getCardsleft()-1);
+            return theCard;
+
+        }
+
+        public void shuffle(){
+            Random rng = new Random();
+            int n = cards.Count;  
+            while (n > 1) {  
+                n--;  
+                int k = rng.Next(n + 1);  
+                Card value = cards[k];  
+                cards[k] = cards[n];  
+                cards[n] = value;  
+            }  
+
         }
         
     }

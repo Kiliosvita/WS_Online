@@ -17,7 +17,8 @@ namespace Shuffle_2
     public partial class Form1 : Form
     {
 
-        private Deckcards currentDeck;
+        private Deck currentDeck;
+        private Hand currentHand;
         private Card currentCard;
         private Image currentImage;
 
@@ -61,26 +62,9 @@ namespace Shuffle_2
 
         private void Buildthedeck()
         {
-            //supposed to return a deck to the form... it SUPER crashes though
-            Deckcards standardDeck = Generator.PlayerDeck(1);
-            currentDeck = new Deckcards(standardDeck.deckID, standardDeck.deckPic);
-            foreach (Deckcards card in standardDeck.deck)
-            {
-                currentDeck.deck.Add(card);
-                
-            }
-
-            //possibly more cursed than the first function, pulls image from card ID... or tries to
-            Card standardCard = Generator.cardbyID(1);
-            currentCard = new Card(standardCard.ID, standardCard.Pic);
-            foreach (Card card in standardCard.allCards)
-            {
-                card.Pic = currentImage;
-                
-            }
-            pictureBoxBSL.Image = currentImage;
-            dynamic val = currentImage;
-            MessageBox.Show(val.GetType().ToString());
+            currentDeck = Generator.buildNewDeck();
+            currentHand = Generator.buildNewHand();
+            
         }   
 
         private void Form1_Load(object sender, EventArgs e)
@@ -210,9 +194,13 @@ namespace Shuffle_2
             lblHand.Text = "";
 
             // Display Hand
-            for (int i = 50; i < 100; i++)
-            {
+            //for (int i = 50; i < 100; i++)
+            //{
                 //lblHand.Text += "location[" + i + "] = " + location[i] + "\n";
+            //}
+            for(int i = 0; i < currentHand.getCardsleft(); i++)
+            {
+                Zone[i].Image = currentHand.getCards()[i].getPic();
             }
         }
 
@@ -222,15 +210,15 @@ namespace Shuffle_2
             
         }
 
-        private void pictureBox1_DragEnter(object sender, DragEventArgs e)
+        private void pictureBox1_DragEnter(object sender, DragEventArgs e) 
         {
             PictureBox btn = sender as PictureBox;
 
-
-            if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Move) != 0)
+            if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect == DragDropEffects.Move))
                 e.Effect = DragDropEffects.Move;
             else
                 e.Effect = DragDropEffects.None;
+            
         }
 
             private void pictureBox1_DragDrop(object sender, DragEventArgs e)
@@ -409,11 +397,16 @@ namespace Shuffle_2
                 // Decrease Deck Size by 1
                 deckSize--;
 
-                // Call Function to Display Hand
+                currentCard = currentDeck.draw();
+                currentHand.insertCard(currentCard);
+
+            // Call Function to Display Hand
                 displayHand();
 
                 // Call Function to Display Deck
                 displayDeck();
+
+                
            // for (int i = 0; i < 5; i++)
            // {
             //    if (Zone[i].Image == null)
@@ -425,6 +418,7 @@ namespace Shuffle_2
            // }
 
         }
+
     }
 }
 

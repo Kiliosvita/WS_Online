@@ -10,14 +10,52 @@ using System.Windows.Forms;
 
 namespace Shuffle_2
 {
-    public class Hand:Card
+    public class Hand
     {
-        public int handID { get; set; }
-        public Image handPic { get; set; }
-        public List<Card> theHand { get; set; }
-        public Hand(int ID, Image Pic) : base(ID, Pic)
-        {
-            theHand = new List<Card>();
+        private const int maxSize = 5;
+        private List<Card> cards;
+
+        public Hand()
+        { 
+            cards = new List<Card>();
         }
+
+        public int getCardsleft()
+        {
+            return cards.Count;
+        }
+
+        public List<Card> getCards()
+        {
+            return cards;
+        }
+        
+        public Card getCardAt(int position)
+        {
+            return cards[position];
+        }
+
+        public Card removeCard(int position)
+        {
+            Card theCard = cards[position];
+            cards.RemoveAt(position);
+            return theCard;
+        }
+
+        public void insertCards(List<Card> cardsToInsert)
+        {
+            foreach (Card cardToInsert in cardsToInsert)
+            {
+                cards.Add(cardToInsert);
+            }
+        }
+
+        public void insertCard(Card cardToInsert)
+        {
+            cards.Add(cardToInsert);
+        }
+
+        
+
     }
 }

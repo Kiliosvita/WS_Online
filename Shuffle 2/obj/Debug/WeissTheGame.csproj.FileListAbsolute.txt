@@ -1,0 +1,10 @@
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\obj\Debug\WeissTheGame.csprojAssemblyReference.cache
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\obj\Debug\Shuffle_2.Form1.resources
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\obj\Debug\Shuffle_2.Properties.Resources.resources
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\obj\Debug\WeissTheGame.csproj.GenerateResource.cache
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\obj\Debug\WeissTheGame.csproj.CoreCompileInputs.cache
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\obj\Debug\Shuffle 2.exe
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\obj\Debug\Shuffle 2.pdb
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\bin\Debug\Shuffle 2.exe.config
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\bin\Debug\Shuffle 2.exe
+C:\Users\Xu William\Source\Repos\WS_Online\Shuffle 2\bin\Debug\Shuffle 2.pdb

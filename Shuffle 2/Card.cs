@@ -12,16 +12,37 @@ namespace Shuffle_2
 {
     public class Card
     {
-        public int ID { get; set; }
-        public Image Pic { get; set; }
-        public List<Card> allCards { get; set; }
-        public Card(int cardID, Image cardPic)
-        {
-            ID = cardID;
-            Pic = cardPic;
-
-            allCards = new List<Card>();
-        }
+        //public int id { get; set; }
+        private Image pic;
+        private Boolean flipped;
         
+        
+        public Card(Image cardPic)
+        {
+            // id = cardID;
+            flipped = false;
+            pic = cardPic;
+        }
+
+        public Image getPic()
+        {
+            return pic;
+        }
+
+        public Boolean getFlipped()
+        {
+            return flipped;
+        }
+
+        public void flip()
+        {
+            if (flipped)
+            {
+                flipped = false;
+            }
+            else
+                flipped = true;
+        }
+
     }
 }
