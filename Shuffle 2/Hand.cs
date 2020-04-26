@@ -12,12 +12,22 @@ namespace Shuffle_2
 {
     public class Hand
     {
-        public List<Card> cards { get; set; }
-        public int cardsleft;
+        private List<Card> cards;
+        private int cardsleft;
         public Hand()
         { 
             cards = new List<Card>();
             cardsleft = 0;
+        }
+
+        public int getCardsleft()
+        {
+            return cardsleft;
+        }
+
+        public List<Card> getCards()
+        {
+            return cards;
         }
 
         public void insertCards(List<Card> cardsToInsert)

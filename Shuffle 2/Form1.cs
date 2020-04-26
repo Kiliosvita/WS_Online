@@ -198,9 +198,9 @@ namespace Shuffle_2
             //{
                 //lblHand.Text += "location[" + i + "] = " + location[i] + "\n";
             //}
-            for(int i = 0; i < currentHand.cardsleft; i++)
+            for(int i = 0; i < currentHand.getCardsleft(); i++)
             {
-                Zone[i].Image = currentHand.cards[i].pic;
+                Zone[i].Image = currentHand.getCards()[i].getPic();
             }
         }
 

@@ -13,13 +13,23 @@ namespace Shuffle_2
     public class Deck
     {
 
-        private List<Card> cards { get; set; }
-        private int cardsleft { get; set; }
+        private List<Card> cards;
+        private int cardsleft;
 
         public Deck()
         {
             cardsleft = 0;
             cards = new List<Card>();
+        }
+
+        public int getCardsleft()
+        {
+            return cardsleft;
+        }
+
+        public List<Card> getCards()
+        {
+            return cards;
         }
 
         public void insertCards(List<Card> cardsToInsert)

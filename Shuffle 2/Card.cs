@@ -13,9 +13,19 @@ namespace Shuffle_2
     public class Card
     {
         //public int id { get; set; }
-        public Image pic { get; set; }
-        public Boolean flipped { get; set; }
+        private Image pic;
+        private Boolean flipped;
         
+        public Image getPic()
+        {
+            return pic;
+        }
+
+        public Boolean getFlipped()
+        {
+            return flipped;
+        }
+
         public Card(Image cardPic)
         {
             // id = cardID;
