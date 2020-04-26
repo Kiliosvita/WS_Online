@@ -124,8 +124,8 @@ namespace Shuffle_2
             {
 
                 // Call Function to Shuffle Deck
-              //  shuffleDeck(myDeck, myDeck[0].decksize);
-
+                //  shuffleDeck(myDeck, myDeck[0].decksize);
+                currentDeck.shuffle();
                 // Call Function to Display Deck
                 displayDeck();
             }

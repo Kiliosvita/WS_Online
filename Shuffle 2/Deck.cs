@@ -53,7 +53,7 @@ namespace Shuffle_2
 
         public void shuffle(){
             Random rng = new Random();
-            int n = cards.Count;  
+            int n = getCardsleft();  
             while (n > 1) {  
                 n--;  
                 int k = rng.Next(n + 1);  
