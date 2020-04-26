@@ -12,19 +12,17 @@ namespace Shuffle_2
 {
     public class Deck
     {
-
+        private const int maxSize = 50;
         private List<Card> cards;
-        private int cardsleft;
 
         public Deck()
         {
-            cardsleft = 0;
             cards = new List<Card>();
         }
 
         public int getCardsleft()
         {
-            return cardsleft;
+            return cards.Count;
         }
 
         public List<Card> getCards()
@@ -37,22 +35,32 @@ namespace Shuffle_2
             foreach(Card cardToInsert in cardsToInsert)
             {
                 cards.Add(cardToInsert);
-                cardsleft += 1;
             }
         }
 
         public void insertCard(Card cardToInsert)
         {
             cards.Add(cardToInsert);
-            cardsleft += 1;
         }
 
         public Card draw()
         {
-            Card theCard = cards[cardsleft-1];
-            cards.RemoveAt(cardsleft-1);
-            cardsleft -= 1;
+            Card theCard = cards[getCardsleft()-1];
+            cards.RemoveAt(getCardsleft()-1);
             return theCard;
+
+        }
+
+        public void shuffle(){
+            Random rng = new Random();
+            int n = cards.Count;  
+            while (n > 1) {  
+                n--;  
+                int k = rng.Next(n + 1);  
+                Card value = cards[k];  
+                cards[k] = cards[n];  
+                cards[n] = value;  
+            }  
 
         }
         

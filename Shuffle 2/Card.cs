@@ -16,6 +16,14 @@ namespace Shuffle_2
         private Image pic;
         private Boolean flipped;
         
+        
+        public Card(Image cardPic)
+        {
+            // id = cardID;
+            flipped = false;
+            pic = cardPic;
+        }
+
         public Image getPic()
         {
             return pic;
@@ -24,13 +32,6 @@ namespace Shuffle_2
         public Boolean getFlipped()
         {
             return flipped;
-        }
-
-        public Card(Image cardPic)
-        {
-            // id = cardID;
-            flipped = false;
-            pic = cardPic;
         }
 
         public void flip()

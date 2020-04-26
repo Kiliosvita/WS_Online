@@ -210,15 +210,15 @@ namespace Shuffle_2
             
         }
 
-        private void pictureBox1_DragEnter(object sender, DragEventArgs e)
+        private void pictureBox1_DragEnter(object sender, DragEventArgs e) 
         {
             PictureBox btn = sender as PictureBox;
 
-
-            if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect & DragDropEffects.Move) != 0)
+            if (e.Data.GetDataPresent(DataFormats.Bitmap) && (e.AllowedEffect == DragDropEffects.Move))
                 e.Effect = DragDropEffects.Move;
             else
                 e.Effect = DragDropEffects.None;
+            
         }
 
             private void pictureBox1_DragDrop(object sender, DragEventArgs e)
