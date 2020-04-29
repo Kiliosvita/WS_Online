@@ -14,6 +14,7 @@ namespace Shuffle_2
     {
         //public int id { get; set; }
         private Image pic;
+        //Might as well make this an int that can accomadate rested and reversed
         private Boolean flipped;
         
         
@@ -43,6 +44,7 @@ namespace Shuffle_2
             else
                 flipped = true;
         }
+        
 
     }
 }

@@ -12,7 +12,7 @@ namespace Shuffle_2
 {
     public class Deck
     {
-        private const int maxSize = 50;
+       // private const int maxSize = 50;
         private List<Card> cards;
 
         public Deck()
@@ -45,10 +45,15 @@ namespace Shuffle_2
 
         public Card draw()
         {
-            Card theCard = cards[getCardsleft()-1];
-            cards.RemoveAt(getCardsleft()-1);
+            Card theCard = cards[getCardsleft() - 1];
+            cards.RemoveAt(getCardsleft() - 1);
             return theCard;
-
+        }
+        public Card drawFromBot()
+        {
+            Card theCard = cards[0];
+            cards.RemoveAt(0);
+            return theCard;
         }
 
         public void shuffle(){

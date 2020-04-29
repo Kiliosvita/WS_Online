@@ -20,12 +20,19 @@ namespace Shuffle_2
         private Deck currentDeck;
         private Hand currentHand;
         private Card currentCard;
+        private object currentBlank;
+        private object currentBlank2;
         private Image currentImage;
 
-        Zones[] myZone = new Zones[50];
+        PictureBox[] TheHand = new PictureBox[50];
+        PictureBox[] TheClock = new PictureBox[7];
+        PictureBox[] TheStage = new PictureBox[5];
+        PictureBox[] Resolution = new PictureBox[5];
+        PictureBox[] test = new PictureBox[5];
+        PictureBox[] zoneArray;
 
-
-        PictureBox[] Zone = new PictureBox[29];
+        PictureBox lastbox;
+        int index;
 
         int lastclick;
         int lastcard;
@@ -37,8 +44,6 @@ namespace Shuffle_2
 
 
         // Declear Variables for Deck & Hand Size
-        int deckSize;
-        int handSize;
         int csL_members;
         int csR_members;
         int csM_members;
@@ -65,45 +70,104 @@ namespace Shuffle_2
             currentDeck = Generator.buildNewDeck();
             currentHand = Generator.buildNewHand();
             
-        }   
+        }
+
+
+        //method called on mouse down to track what area the card is coming from
+        private void FindArray(PictureBox pbx)
+        {
+
+            foreach (PictureBox currentPbx in TheHand)
+            {
+                if (currentPbx == pbx)
+                {
+                    zoneArray = TheHand;
+                    for (int i=0; i<zoneArray.Length; i++)
+                    {
+                        if (zoneArray[i] == currentPbx) {
+                            index = i;
+                            currentCard = currentHand.getCardAt(index);
+                            currentHand.removeCard(index);
+                            currentBlank = currentHand;
+                        }
+                    }
+                }
+            }
+            foreach (PictureBox currentPbx in TheClock)
+            {
+                if (currentPbx == pbx)
+                {
+                    zoneArray = TheClock;
+                }
+            }
+            foreach (PictureBox currentPbx in TheStage)
+            {
+                if (currentPbx == pbx)
+                {
+                    zoneArray = TheStage;
+                }
+            }
+            foreach (PictureBox currentPbx in Resolution)
+            {
+                if (currentPbx == pbx)
+                {
+                    zoneArray = Resolution;
+                }
+            }
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-
             //pictureBoxBSL.Image = Card
 
-            Zone[0] = h1;
-            Zone[1] = h2;
-            Zone[2] = h3;
-            Zone[3] = h4;
-            Zone[4] = h5;
+            TheHand[0] = handpcbx1;
+            TheHand[1] = handpcbx2;
+            TheHand[2] = handpcbx3;
+            TheHand[3] = handpcbx4;
+            TheHand[4] = handpcbx5;
 
-            Zone[5] = c1;
-            Zone[6] = c2;
-            Zone[7] = c3;
-            Zone[8] = c4;
-            Zone[9] = c5;
-            Zone[10] = c6;
-            Zone[11] = c7;
+
+            TheClock[0] = c1;
+            TheClock[1] = c2;
+            TheClock[2] = c3;
+            TheClock[3] = c4;
+            TheClock[4] = c5;
+            TheClock[5] = c6;
+            TheClock[6] = c7;
             
-            Zone[12] = pictureBoxBSL;
-            Zone[13] = pictureBoxBSR;
-            Zone[14] = pictureBoxCSL;
-            Zone[15] = pictureBoxCSM;
-            Zone[16] = pictureBoxCSR;
+            TheStage[0] = pictureBoxBSL;
+            TheStage[1] = pictureBoxBSR;
+            TheStage[2] = pictureBoxCSL;
+            TheStage[3] = pictureBoxCSM;
+            TheStage[4] = pictureBoxCSR;
 
-            Zone[17] = Res1;
-            Zone[18] = Res2;
-            Zone[19] = Res3;
-            Zone[20] = Res4;
+            Resolution[0] = Res1;
+            Resolution[1] = Res2;
+            Resolution[2] = Res3;
+            Resolution[3] = Res4;
 
+            test[0] = pictureBox6;
+            test[1] = pictureBox5;
+            test[2] = pictureBox4;
+            test[3] = pictureBox3;
+            test[4] = pictureBox2;
 
-            for (int i = 0; i <= 20; i++)
+            for (int i = 0; i <5; i++)
             {
-                Zone[i].AllowDrop = true;
+                TheHand[i].AllowDrop = true;
             }
-            
+            for (int i = 0; i < 7; i++)
+            {
+                TheClock[i].AllowDrop = true;
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                TheStage[i].AllowDrop = true;
+            }
+            for (int i = 0; i < 4; i++)
+            {
+                Resolution[i].AllowDrop = true;
+            }
         }
 
         public void displayDeck()
@@ -122,10 +186,8 @@ namespace Shuffle_2
             // Only works if 'Start' button has been pressed
             if (gameStart == true)
             {
-
                 // Call Function to Shuffle Deck
-              //  shuffleDeck(myDeck, myDeck[0].decksize);
-
+                currentDeck.shuffle();
                 // Call Function to Display Deck
                 displayDeck();
             }
@@ -154,39 +216,21 @@ namespace Shuffle_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-           // int temp = location[0];
-            // Copy First Card of Deck to Last Card in Hand
-
-
-
-                // Incerease Hand Size by 1
-                handSize++;
-
-                // Call Function to Shift Deck Cards Up 1
-                shiftDeckCardsUp1(0); // Send 0 to Rep Top Card of Deck -> deck[0]
-
-                // Set Value of Last Card in Deck to 0 after Shifting
-               // location[deckSize - 1] = 0;
-                // Decrease Deck Size by 1
-                deckSize--;
+            if (currentDeck.getCardsleft() != 0)
+            {
+                currentCard = currentDeck.draw();
+                currentHand.insertCard(currentCard);
 
                 // Call Function to Display Hand
                 displayHand();
 
                 // Call Function to Display Deck
                 displayDeck();
-            
-            
-            for (int i = 0; i < 5; i++)
-            {
-                if (Zone[i].Image == null)
-                {
-                   // Zone[i].Image = Cards[temp];
-
-                    break;
-                }
             }
-
+            else
+            {
+                MessageBox.Show("The deck is empty");
+            }
         }
         public void displayHand()
         {
@@ -200,14 +244,21 @@ namespace Shuffle_2
             //}
             for(int i = 0; i < currentHand.getCardsleft(); i++)
             {
-                Zone[i].Image = currentHand.getCards()[i].getPic();
+                TheHand[i].Image = currentHand.getCards()[i].getPic();
             }
         }
-
+        
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            for (int i = 0; i < 5; i++)
+            {
+                test[i].Image = null;
+            }
+            for (int i = 0; i < currentHand.getCardsleft(); i++)
+            {
+                test[i].Image = currentHand.getCards()[i].getPic();
+            }
         }
 
         private void pictureBox1_DragEnter(object sender, DragEventArgs e) 
@@ -221,88 +272,47 @@ namespace Shuffle_2
             
         }
 
-            private void pictureBox1_DragDrop(object sender, DragEventArgs e)
-        {
-            var index = -1;
-            var cardindex = -1;
-            PictureBox btn = sender as PictureBox;
-            Image img = null;
-
-            //find array number  of picturebox as index
-            for (int i = 0; i < Zone.Length; i++)
-            {
-                if (Zone[i] == btn)
-                {
-                    index = i;
-                    break;
-                }
-            }
-            newspot = index;
-           
-            //For card moving to empty space, card value is stored as Cards[cardindex]
-            if (Zone[index].Image == null)
-            {
-                Zone[index].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
-                //Find the card to change the label
-
-                //for (int i = 0; i < Cards.Length; i++)
-               // {
-                //    if (Cards[i] == Zone[index].Image)
-                //    {
-                //        cardindex = i;
-              //          break;
-              //      }
-              //  }
-              //  Zone[lastclick].Image = null;
-                
-            }
-
-            // Card moving to occupied space, positions are swapped instead
-            else
-            {
-                img = Zone[index].Image;
-                //Zone[19].Image = img; 
-                //testing to see if img works (yes)
-                Zone[index].Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
-                //transfer image
-               // for (int i = 0; i < Cards.Length; i++)
-              //  {
-               //     if (Cards[i] == Zone[index].Image)
-              //      {
-              //          cardindex = i;
-              //          break;
-              //      }
-               // }
-              //  Zone[index].Image = Cards[cardindex];
-               // Zone[lastclick].Image = img;
-                //MessageBox.Show(lastclick.ToString());
-                
-            
-        }
-             
-        }
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            var index = -1;
-            PictureBox btn = sender as PictureBox;
-            if (btn.Image != null)
+            lastbox = sender as PictureBox;
+            if (lastbox.Image != null)
             {
                 if (e.Button == MouseButtons.Left)
                 {
-                    for (int i = 0; i < Zone.Length; i++)
-                    {
-                        if (Zone[i] == btn)
-                        {
-                            index = i;
-                            break;
-                        }
-                    }
-                    lastclick = index;
-                    Zone[index].DoDragDrop(Zone[index].Image, DragDropEffects.Move);
-                    //Position[index].Text = nope;
+                    lastbox.DoDragDrop(lastbox.Image, DragDropEffects.Move);
                 }
             }
         }
+
+        private void pictureBox1_DragDrop(object sender, DragEventArgs e)
+        {
+          
+            PictureBox pbx = sender as PictureBox;
+            Image img = null;
+            FindArray(lastbox);
+            int in1 = index;
+
+            //For card moving to empty space, card value is stored as Cards[cardindex]
+            if (pbx.Image == null)
+            {
+                //remove current card handled by other
+                //insert new value handled elsewhere as well
+                pbx.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
+                lastbox.Image = null;
+                FindArray(pbx);
+
+
+            }
+            // Card moving to occupied space, positions are swapped instead
+            else
+            {
+                img = pbx.Image;
+                pbx.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
+                lastbox.Image = img;
+            }
+            
+        }
+        
         
         
 
@@ -386,39 +396,24 @@ namespace Shuffle_2
 
         private void BtmDraw_Click(object sender, EventArgs e)
         {
-           // int temp = location[deckSize - 1];
-            // Copy Last Card of Deck to Last Card in Hand
-         //   location[handSize+50] = location[deckSize - 1];
-                // Incerease Hand Size by 1
-                handSize++;
-
-                // Set Value of Copied Card in Deck to 0
-               // location[deckSize - 1] = 0;
-                // Decrease Deck Size by 1
-                deckSize--;
-
-                currentCard = currentDeck.draw();
+            if (currentDeck.getCardsleft() != 0)
+            {
+                currentCard = currentDeck.drawFromBot();
                 currentHand.insertCard(currentCard);
 
-            // Call Function to Display Hand
+                // Call Function to Display Hand
                 displayHand();
 
                 // Call Function to Display Deck
                 displayDeck();
-
-                
-           // for (int i = 0; i < 5; i++)
-           // {
-            //    if (Zone[i].Image == null)
-           //     {
-           //         Zone[i].Image = Cards[temp];
-
-            //        break;
-            //    }
-           // }
-
+            }
+            else
+            {
+                MessageBox.Show("The deck is empty");
+            }
         }
 
+       
     }
 }
 

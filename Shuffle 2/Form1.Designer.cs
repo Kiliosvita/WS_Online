@@ -31,16 +31,11 @@
             this.Waiting_Room = new System.Windows.Forms.ListBox();
             this.Memory = new System.Windows.Forms.ListBox();
             this.Stock = new System.Windows.Forms.ListBox();
-            this.h1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.h2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.h3 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.h4 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.h5 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -91,11 +86,23 @@
             this.btnShiftUp1 = new System.Windows.Forms.Button();
             this.btnShiftDown1 = new System.Windows.Forms.Button();
             this.BtmDraw = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.h1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h5)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.handpcbx5 = new Shuffle_2.Handpcbx();
+            this.handpcbx4 = new Shuffle_2.Handpcbx();
+            this.handpcbx3 = new Shuffle_2.Handpcbx();
+            this.handpcbx2 = new Shuffle_2.Handpcbx();
+            this.handpcbx1 = new Shuffle_2.Handpcbx();
             ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3)).BeginInit();
@@ -120,6 +127,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.wrbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.membx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBX)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx1)).BeginInit();
             this.SuspendLayout();
             // 
             // Waiting_Room
@@ -146,20 +169,6 @@
             this.Stock.Size = new System.Drawing.Size(74, 251);
             this.Stock.TabIndex = 3;
             // 
-            // h1
-            // 
-            this.h1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.h1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.h1.Location = new System.Drawing.Point(129, 494);
-            this.h1.Name = "h1";
-            this.h1.Size = new System.Drawing.Size(76, 95);
-            this.h1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.h1.TabIndex = 4;
-            this.h1.TabStop = false;
-            this.h1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
-            this.h1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.h1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -178,20 +187,6 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "-1";
             // 
-            // h2
-            // 
-            this.h2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.h2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.h2.Location = new System.Drawing.Point(211, 494);
-            this.h2.Name = "h2";
-            this.h2.Size = new System.Drawing.Size(76, 95);
-            this.h2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.h2.TabIndex = 6;
-            this.h2.TabStop = false;
-            this.h2.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
-            this.h2.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.h2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -200,20 +195,6 @@
             this.label3.Size = new System.Drawing.Size(16, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "-1";
-            // 
-            // h3
-            // 
-            this.h3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.h3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.h3.Location = new System.Drawing.Point(293, 494);
-            this.h3.Name = "h3";
-            this.h3.Size = new System.Drawing.Size(76, 95);
-            this.h3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.h3.TabIndex = 8;
-            this.h3.TabStop = false;
-            this.h3.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
-            this.h3.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.h3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // label4
             // 
@@ -224,20 +205,6 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "-1";
             // 
-            // h4
-            // 
-            this.h4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.h4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.h4.Location = new System.Drawing.Point(375, 494);
-            this.h4.Name = "h4";
-            this.h4.Size = new System.Drawing.Size(76, 95);
-            this.h4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.h4.TabIndex = 10;
-            this.h4.TabStop = false;
-            this.h4.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
-            this.h4.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.h4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -246,20 +213,6 @@
             this.label5.Size = new System.Drawing.Size(16, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "-1";
-            // 
-            // h5
-            // 
-            this.h5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.h5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.h5.Location = new System.Drawing.Point(457, 494);
-            this.h5.Name = "h5";
-            this.h5.Size = new System.Drawing.Size(76, 95);
-            this.h5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.h5.TabIndex = 12;
-            this.h5.TabStop = false;
-            this.h5.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
-            this.h5.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.h5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // button1
             // 
@@ -378,6 +331,9 @@
             this.Res4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Res4.TabIndex = 27;
             this.Res4.TabStop = false;
+            this.Res4.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.Res4.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.Res4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // Res3
             // 
@@ -389,6 +345,9 @@
             this.Res3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Res3.TabIndex = 26;
             this.Res3.TabStop = false;
+            this.Res3.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.Res3.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.Res3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // Res2
             // 
@@ -400,6 +359,9 @@
             this.Res2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Res2.TabIndex = 25;
             this.Res2.TabStop = false;
+            this.Res2.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.Res2.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.Res2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // Res1
             // 
@@ -411,6 +373,9 @@
             this.Res1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Res1.TabIndex = 24;
             this.Res1.TabStop = false;
+            this.Res1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.Res1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.Res1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // pictureBoxBSL
             // 
@@ -782,11 +747,223 @@
             this.BtmDraw.UseVisualStyleBackColor = true;
             this.BtmDraw.Click += new System.EventHandler(this.BtmDraw_Click);
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.pictureBox7);
+            this.panel1.Controls.Add(this.pictureBox8);
+            this.panel1.Controls.Add(this.pictureBox9);
+            this.panel1.Controls.Add(this.pictureBox10);
+            this.panel1.Controls.Add(this.pictureBox11);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox5);
+            this.panel1.Controls.Add(this.pictureBox3);
+            this.panel1.Controls.Add(this.pictureBox6);
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Location = new System.Drawing.Point(805, 239);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1010, 261);
+            this.panel1.TabIndex = 66;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox7.Location = new System.Drawing.Point(741, 96);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 76;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox8.Location = new System.Drawing.Point(659, 96);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 75;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox9.Image = global::Shuffle_2.Properties.Resources._01;
+            this.pictureBox9.Location = new System.Drawing.Point(577, 96);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 74;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox10.Image = global::Shuffle_2.Properties.Resources._01;
+            this.pictureBox10.Location = new System.Drawing.Point(495, 96);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox10.TabIndex = 73;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox11.Location = new System.Drawing.Point(413, 96);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox11.TabIndex = 72;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Location = new System.Drawing.Point(331, 98);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 71;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Location = new System.Drawing.Point(85, 98);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 68;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Location = new System.Drawing.Point(249, 98);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 70;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Location = new System.Drawing.Point(3, 98);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 67;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox4.Location = new System.Drawing.Point(167, 98);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 69;
+            this.pictureBox4.TabStop = false;
+            // 
+            // handpcbx5
+            // 
+            this.handpcbx5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.handpcbx5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.handpcbx5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.handpcbx5.Location = new System.Drawing.Point(457, 494);
+            this.handpcbx5.Name = "handpcbx5";
+            this.handpcbx5.Size = new System.Drawing.Size(76, 95);
+            this.handpcbx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.handpcbx5.TabIndex = 71;
+            this.handpcbx5.TabStop = false;
+            this.handpcbx5.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx5.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.handpcbx5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // handpcbx4
+            // 
+            this.handpcbx4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.handpcbx4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.handpcbx4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.handpcbx4.Location = new System.Drawing.Point(375, 494);
+            this.handpcbx4.Name = "handpcbx4";
+            this.handpcbx4.Size = new System.Drawing.Size(76, 95);
+            this.handpcbx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.handpcbx4.TabIndex = 70;
+            this.handpcbx4.TabStop = false;
+            this.handpcbx4.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx4.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.handpcbx4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // handpcbx3
+            // 
+            this.handpcbx3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.handpcbx3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.handpcbx3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.handpcbx3.Location = new System.Drawing.Point(293, 494);
+            this.handpcbx3.Name = "handpcbx3";
+            this.handpcbx3.Size = new System.Drawing.Size(76, 95);
+            this.handpcbx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.handpcbx3.TabIndex = 69;
+            this.handpcbx3.TabStop = false;
+            this.handpcbx3.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx3.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.handpcbx3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // handpcbx2
+            // 
+            this.handpcbx2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.handpcbx2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.handpcbx2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.handpcbx2.Location = new System.Drawing.Point(211, 494);
+            this.handpcbx2.Name = "handpcbx2";
+            this.handpcbx2.Size = new System.Drawing.Size(76, 95);
+            this.handpcbx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.handpcbx2.TabIndex = 68;
+            this.handpcbx2.TabStop = false;
+            this.handpcbx2.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx2.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.handpcbx2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
+            // handpcbx1
+            // 
+            this.handpcbx1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.handpcbx1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.handpcbx1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.handpcbx1.Location = new System.Drawing.Point(129, 494);
+            this.handpcbx1.Name = "handpcbx1";
+            this.handpcbx1.Size = new System.Drawing.Size(76, 95);
+            this.handpcbx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.handpcbx1.TabIndex = 67;
+            this.handpcbx1.TabStop = false;
+            this.handpcbx1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.handpcbx1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1340, 629);
+            this.ClientSize = new System.Drawing.Size(1353, 629);
+            this.Controls.Add(this.handpcbx5);
+            this.Controls.Add(this.handpcbx4);
+            this.Controls.Add(this.handpcbx3);
+            this.Controls.Add(this.handpcbx2);
+            this.Controls.Add(this.handpcbx1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BtmDraw);
             this.Controls.Add(this.btnShiftDown1);
             this.Controls.Add(this.btnShiftUp1);
@@ -838,26 +1015,16 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.h5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.h4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.h3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.h2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.h1);
             this.Controls.Add(this.Stock);
             this.Controls.Add(this.Memory);
             this.Controls.Add(this.Waiting_Room);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.h1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.h5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3)).EndInit();
@@ -882,6 +1049,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.wrbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBX)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.handpcbx1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -891,16 +1074,11 @@
         private System.Windows.Forms.ListBox Waiting_Room;
         private System.Windows.Forms.ListBox Memory;
         private System.Windows.Forms.ListBox Stock;
-        private System.Windows.Forms.PictureBox h1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox h2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox h3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox h4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox h5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -951,6 +1129,23 @@
         private System.Windows.Forms.Button btnShiftUp1;
         private System.Windows.Forms.Button btnShiftDown1;
         private System.Windows.Forms.Button BtmDraw;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private Handpcbx handpcbx1;
+        private Handpcbx handpcbx2;
+        private Handpcbx handpcbx3;
+        private Handpcbx handpcbx4;
+        private Handpcbx handpcbx5;
     }
 }
 

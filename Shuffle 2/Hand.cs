@@ -12,7 +12,7 @@ namespace Shuffle_2
 {
     public class Hand
     {
-        private const int maxSize = 5;
+        private const int maxSize = 7;
         private List<Card> cards;
 
         public Hand()
@@ -35,10 +35,12 @@ namespace Shuffle_2
             return cards[position];
         }
 
+
         public Card removeCard(int position)
         {
             Card theCard = cards[position];
             cards.RemoveAt(position);
+            cards.Insert(position, new Card(null));
             return theCard;
         }
 
