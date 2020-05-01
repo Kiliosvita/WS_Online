@@ -50,11 +50,11 @@
             this.Res3 = new System.Windows.Forms.PictureBox();
             this.Res2 = new System.Windows.Forms.PictureBox();
             this.Res1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBSL = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBSR = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCSL = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCSM = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCSR = new System.Windows.Forms.PictureBox();
+            this.pictureBoxBSL = new Shuffle_2.Stagepcbx();
+            this.pictureBoxBSR = new Shuffle_2.Stagepcbx();
+            this.pictureBoxCSL = new Shuffle_2.Stagepcbx();
+            this.pictureBoxCSM = new Shuffle_2.Stagepcbx();
+            this.pictureBoxCSR = new Shuffle_2.Stagepcbx();
             this.CxBx = new System.Windows.Forms.PictureBox();
             this.lvl3 = new System.Windows.Forms.PictureBox();
             this.lvl2 = new System.Windows.Forms.PictureBox();
@@ -1093,11 +1093,7 @@
         private System.Windows.Forms.PictureBox Res3;
         private System.Windows.Forms.PictureBox Res2;
         private System.Windows.Forms.PictureBox Res1;
-        private System.Windows.Forms.PictureBox pictureBoxBSL;
-        private System.Windows.Forms.PictureBox pictureBoxBSR;
-        private System.Windows.Forms.PictureBox pictureBoxCSL;
-        private System.Windows.Forms.PictureBox pictureBoxCSM;
-        private System.Windows.Forms.PictureBox pictureBoxCSR;
+
         private System.Windows.Forms.PictureBox CxBx;
         private System.Windows.Forms.PictureBox lvl3;
         private System.Windows.Forms.PictureBox lvl2;
@@ -1146,6 +1142,11 @@
         private Handpcbx handpcbx3;
         private Handpcbx handpcbx4;
         private Handpcbx handpcbx5;
+        private Stagepcbx pictureBoxBSL;
+        private Stagepcbx pictureBoxBSR;
+        private Stagepcbx pictureBoxCSL;
+        private Stagepcbx pictureBoxCSM;
+        private Stagepcbx pictureBoxCSR;
     }
 }
 
