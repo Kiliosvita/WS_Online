@@ -13,19 +13,19 @@ namespace Shuffle_2
     public class Hand
     {
         private const int maxSize = 7;
-        private List<Card> cards;
+        private Card[] cards;
 
         public Hand()
         { 
-            cards = new List<Card>();
+            cards = new Card[5];
         }
 
         public int getCardsleft()
         {
-            return cards.Count;
+            return cards.Length;
         }
 
-        public List<Card> getCards()
+        public Card[] getCards()
         {
             return cards;
         }
@@ -39,22 +39,29 @@ namespace Shuffle_2
         public Card removeCard(int position)
         {
             Card theCard = cards[position];
-            cards.RemoveAt(position);
-            cards.Insert(position, new Card(null));
+            cards[position] = null;
             return theCard;
         }
 
-        public void insertCards(List<Card> cardsToInsert)
+/*        public void insertCards(List<Card> cardsToInsert)
         {
             foreach (Card cardToInsert in cardsToInsert)
             {
                 cards.Add(cardToInsert);
             }
         }
-
+*/
         public void insertCard(Card cardToInsert)
         {
-            cards.Add(cardToInsert);
+            for(int i = 0; i < cards.Length; i++)
+            {
+                if(cards[i] == null)
+                {
+                    cards[i] = cardToInsert;
+                    break;
+
+                }
+            }
         }
 
         

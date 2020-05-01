@@ -24,7 +24,7 @@ namespace Shuffle_2
         private object currentBlank2;
         private Image currentImage;
 
-        PictureBox[] TheHand = new PictureBox[50];
+        Handpcbx[] TheHand = new Handpcbx[50];
         PictureBox[] TheClock = new PictureBox[7];
         PictureBox[] TheStage = new PictureBox[5];
         PictureBox[] Resolution = new PictureBox[5];
@@ -244,7 +244,8 @@ namespace Shuffle_2
             //}
             for(int i = 0; i < currentHand.getCardsleft(); i++)
             {
-                TheHand[i].Image = currentHand.getCards()[i].getPic();
+                TheHand[i].setCard(currentHand.getCards()[i]);
+                TheHand[i].updateImage();
             }
         }
         
@@ -289,7 +290,7 @@ namespace Shuffle_2
           
             PictureBox pbx = sender as PictureBox;
             Image img = null;
-            FindArray(lastbox);
+            //FindArray(lastbox);
             int in1 = index;
 
             //For card moving to empty space, card value is stored as Cards[cardindex]
@@ -299,7 +300,7 @@ namespace Shuffle_2
                 //insert new value handled elsewhere as well
                 pbx.Image = (Bitmap)e.Data.GetData(DataFormats.Bitmap, true);
                 lastbox.Image = null;
-                FindArray(pbx);
+              //  FindArray(pbx);
 
 
             }

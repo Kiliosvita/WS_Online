@@ -12,8 +12,25 @@ namespace Shuffle_2
 {
     class Handpcbx : PictureBox
     {
-        Card cardinhand;
+        private Card cardinhand;
 
-        
+
+        public Handpcbx() { }
+
+        public Card getCard()
+        {
+            return cardinhand;
+        }
+
+        public void setCard(Card a)
+        {
+            cardinhand = a;
+        }
+
+        public void updateImage()
+        {
+            if(cardinhand != null)
+                Image = cardinhand.getPic();
+        }
     }
 }
