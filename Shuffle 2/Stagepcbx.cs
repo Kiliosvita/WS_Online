@@ -13,5 +13,25 @@ namespace Shuffle_2
     class Stagepcbx : PictureBox
     {
         Card cardonstage;
+
+        public Stagepcbx() { }
+
+        public Card getCard()
+        {
+            return cardonstage;
+        }
+
+        public void setCard(Card a)
+        {
+            cardonstage = a;
+        }
+
+        public void updateImage()
+        {
+            if (cardonstage != null)
+                Image = cardonstage.getPic();
+            else
+                Image = null;
+        }
     }
 }

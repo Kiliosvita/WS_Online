@@ -387,9 +387,9 @@
             this.pictureBoxBSL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBSL.TabIndex = 28;
             this.pictureBoxBSL.TabStop = false;
-            this.pictureBoxBSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.pictureBoxBSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
             this.pictureBoxBSL.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxBSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBoxBSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
             // pictureBoxBSR
             // 
@@ -401,9 +401,9 @@
             this.pictureBoxBSR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxBSR.TabIndex = 29;
             this.pictureBoxBSR.TabStop = false;
-            this.pictureBoxBSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.pictureBoxBSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
             this.pictureBoxBSR.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxBSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBoxBSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
             // pictureBoxCSL
             // 
@@ -415,9 +415,9 @@
             this.pictureBoxCSL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCSL.TabIndex = 30;
             this.pictureBoxCSL.TabStop = false;
-            this.pictureBoxCSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.pictureBoxCSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
             this.pictureBoxCSL.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxCSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBoxCSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
             // pictureBoxCSM
             // 
@@ -429,9 +429,9 @@
             this.pictureBoxCSM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCSM.TabIndex = 31;
             this.pictureBoxCSM.TabStop = false;
-            this.pictureBoxCSM.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.pictureBoxCSM.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
             this.pictureBoxCSM.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxCSM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBoxCSM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
             // pictureBoxCSR
             // 
@@ -443,9 +443,9 @@
             this.pictureBoxCSR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCSR.TabIndex = 32;
             this.pictureBoxCSR.TabStop = false;
-            this.pictureBoxCSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.pictureBoxCSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
             this.pictureBoxCSR.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxCSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBoxCSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
             // CxBx
             // 
@@ -889,9 +889,9 @@
             this.handpcbx5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.handpcbx5.TabIndex = 71;
             this.handpcbx5.TabStop = false;
-            this.handpcbx5.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx5.DragDrop += new System.Windows.Forms.DragEventHandler(this.handpcbx_DragDrop);
             this.handpcbx5.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.handpcbx5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.handpcbx5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.handpcbx_MouseDown);
             // 
             // handpcbx4
             // 
@@ -904,9 +904,9 @@
             this.handpcbx4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.handpcbx4.TabIndex = 70;
             this.handpcbx4.TabStop = false;
-            this.handpcbx4.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx4.DragDrop += new System.Windows.Forms.DragEventHandler(this.handpcbx_DragDrop);
             this.handpcbx4.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.handpcbx4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.handpcbx4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.handpcbx_MouseDown);
             // 
             // handpcbx3
             // 
@@ -919,9 +919,9 @@
             this.handpcbx3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.handpcbx3.TabIndex = 69;
             this.handpcbx3.TabStop = false;
-            this.handpcbx3.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx3.DragDrop += new System.Windows.Forms.DragEventHandler(this.handpcbx_DragDrop);
             this.handpcbx3.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.handpcbx3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.handpcbx3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.handpcbx_MouseDown);
             // 
             // handpcbx2
             // 
@@ -934,9 +934,9 @@
             this.handpcbx2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.handpcbx2.TabIndex = 68;
             this.handpcbx2.TabStop = false;
-            this.handpcbx2.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx2.DragDrop += new System.Windows.Forms.DragEventHandler(this.handpcbx_DragDrop);
             this.handpcbx2.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.handpcbx2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.handpcbx2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.handpcbx_MouseDown);
             // 
             // handpcbx1
             // 
@@ -949,9 +949,9 @@
             this.handpcbx1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.handpcbx1.TabIndex = 67;
             this.handpcbx1.TabStop = false;
-            this.handpcbx1.DragDrop += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragDrop);
+            this.handpcbx1.DragDrop += new System.Windows.Forms.DragEventHandler(this.handpcbx_DragDrop);
             this.handpcbx1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.handpcbx1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.handpcbx1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.handpcbx_MouseDown);
             // 
             // Form1
             // 

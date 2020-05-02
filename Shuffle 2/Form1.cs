@@ -24,9 +24,9 @@ namespace Shuffle_2
         private object currentBlank2;
         private Image currentImage;
 
-        Handpcbx[] TheHand = new Handpcbx[50];
+        Handpcbx[] TheHand = new Handpcbx[5];
         PictureBox[] TheClock = new PictureBox[7];
-        PictureBox[] TheStage = new PictureBox[5];
+        Stagepcbx[] TheStage = new Stagepcbx[5];
         PictureBox[] Resolution = new PictureBox[5];
         PictureBox[] test = new PictureBox[5];
         PictureBox[] zoneArray;
@@ -273,9 +273,36 @@ namespace Shuffle_2
             
         }
 
+
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             lastbox = sender as PictureBox;
+            if (lastbox.Image != null)
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    lastbox.DoDragDrop(lastbox.Image, DragDropEffects.Move);
+                }
+            }
+        }
+
+        private void handpcbx_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastbox = sender as Handpcbx;
+            
+            if (lastbox.Image != null)
+            {
+                if (e.Button == MouseButtons.Left)
+                {
+                    lastbox.DoDragDrop(lastbox.Image, DragDropEffects.Move);
+                }
+            }
+        }
+
+        private void stagepcbx_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastbox = sender as Stagepcbx;
+
             if (lastbox.Image != null)
             {
                 if (e.Button == MouseButtons.Left)
@@ -313,9 +340,99 @@ namespace Shuffle_2
             }
             
         }
-        
-        
-        
+
+        private void handpcbx_DragDrop(object sender, DragEventArgs e)
+        {
+
+            Handpcbx pbx = sender as Handpcbx;
+            String lastboxType = lastbox.GetType().Name;
+            Card replacement;
+            
+
+            if (lastboxType.Equals("Handpcbx"))
+            {
+                
+                Handpcbx lastbox2 = lastbox as Handpcbx;
+                replacement = lastbox2.getCard();
+                lastbox2.setCard(pbx.getCard());
+                pbx.setCard(replacement);
+                lastbox2.updateImage();
+                pbx.updateImage();
+                //  FindArray(pbx);
+
+
+            }
+            
+            else if (lastboxType.Equals("Stagepcbx"))
+            {
+                
+                Stagepcbx lastbox2 = lastbox as Stagepcbx;
+                replacement = lastbox2.getCard();
+                lastbox2.setCard(pbx.getCard());
+                pbx.setCard(replacement);
+                lastbox2.updateImage();
+                pbx.updateImage();
+                //  FindArray(pbx);
+
+
+            }
+            else
+            {
+
+                throw new Exception("Not implemented");
+
+               
+            }
+
+        }
+
+        private void stagepcbx_DragDrop(object sender, DragEventArgs e)
+        {
+
+            Stagepcbx pbx = sender as Stagepcbx;
+            String lastboxType = lastbox.GetType().Name;
+            Card replacement;
+
+
+            if (lastboxType.Equals("Handpcbx"))
+            {
+
+                Handpcbx lastbox2 = lastbox as Handpcbx;
+                replacement = lastbox2.getCard();
+                lastbox2.setCard(pbx.getCard());
+                pbx.setCard(replacement);
+                lastbox2.updateImage();
+                pbx.updateImage();
+                //  FindArray(pbx);
+
+
+            }
+
+            else if (lastboxType.Equals("Stagepcbx"))
+            {
+
+                Stagepcbx lastbox2 = lastbox as Stagepcbx;
+                replacement = lastbox2.getCard();
+                lastbox2.setCard(pbx.getCard());
+                pbx.setCard(replacement);
+                lastbox2.updateImage();
+                pbx.updateImage();
+                //  FindArray(pbx);
+
+
+            }
+            else
+            {
+
+                throw new Exception("Not implemented");
+
+
+            }
+
+        }
+
+
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -397,24 +514,36 @@ namespace Shuffle_2
 
         private void BtmDraw_Click(object sender, EventArgs e)
         {
-            if (currentDeck.getCardsleft() != 0)
-            {
-                currentCard = currentDeck.drawFromBot();
-                currentHand.insertCard(currentCard);
+            /*           if (currentDeck.getCardsleft() != 0)
+                       {
+                           currentCard = currentDeck.drawFromBot();
+                           currentHand.insertCard(currentCard);
 
-                // Call Function to Display Hand
-                displayHand();
+                           // Call Function to Display Hand
+                           displayHand();
 
-                // Call Function to Display Deck
-                displayDeck();
-            }
-            else
+                           // Call Function to Display Deck
+                           displayDeck();
+                       }
+                       else
+                       {
+                           MessageBox.Show("The deck is empty");
+                       }*/
+
+            foreach (Handpcbx currentPbx in TheHand)
             {
-                MessageBox.Show("The deck is empty");
+                if(currentPbx.getCard() == null)
+                {
+                    currentPbx.setCard(currentDeck.draw());
+                    currentPbx.updateImage();
+                    return;
+                }
             }
+
+            throw new Exception("No space");
         }
 
-       
+        
     }
 }
 

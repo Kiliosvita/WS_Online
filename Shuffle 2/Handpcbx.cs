@@ -29,8 +29,10 @@ namespace Shuffle_2
 
         public void updateImage()
         {
-            if(cardinhand != null)
+            if (cardinhand != null)
                 Image = cardinhand.getPic();
+            else
+                Image = null;
         }
     }
 }
