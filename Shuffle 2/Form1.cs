@@ -18,7 +18,7 @@ namespace Shuffle_2
     {
 
         private Deck currentDeck;
-        private Hand currentHand;
+//        private Hand currentHand;
         private Card currentCard;
         private object currentBlank;
         private object currentBlank2;
@@ -68,13 +68,13 @@ namespace Shuffle_2
         private void Buildthedeck()
         {
             currentDeck = Generator.buildNewDeck();
-            currentHand = Generator.buildNewHand();
+//            currentHand = Generator.buildNewHand();
             
         }
 
 
         //method called on mouse down to track what area the card is coming from
-        private void FindArray(PictureBox pbx)
+/*        private void FindArray(PictureBox pbx)
         {
 
             foreach (PictureBox currentPbx in TheHand)
@@ -115,7 +115,7 @@ namespace Shuffle_2
                 }
             }
         }
-
+*/
         private void Form1_Load(object sender, EventArgs e)
         {
             //pictureBoxBSL.Image = Card
@@ -216,7 +216,7 @@ namespace Shuffle_2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (currentDeck.getCardsleft() != 0)
+            /*if (currentDeck.getCardsleft() != 0)
             {
                 currentCard = currentDeck.draw();
                 currentHand.insertCard(currentCard);
@@ -231,9 +231,11 @@ namespace Shuffle_2
             {
                 MessageBox.Show("The deck is empty");
             }
+            */
         }
         public void displayHand()
         {
+            /*
             // Clear Hand Label
             lblHand.Text = "";
 
@@ -247,11 +249,13 @@ namespace Shuffle_2
                 TheHand[i].setCard(currentHand.getCards()[i]);
                 TheHand[i].updateImage();
             }
+            */
         }
         
 
         private void button3_Click(object sender, EventArgs e)
         {
+            /*
             for (int i = 0; i < 5; i++)
             {
                 test[i].Image = null;
@@ -260,6 +264,7 @@ namespace Shuffle_2
             {
                 test[i].Image = currentHand.getCards()[i].getPic();
             }
+            */
         }
 
         private void pictureBox1_DragEnter(object sender, DragEventArgs e) 
