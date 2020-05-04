@@ -18,13 +18,15 @@ namespace Shuffle_2
     {
 
         private Deck currentDeck;
-//        private Hand currentHand;
+        private WaitingRoom currentWR;
+        //        private Hand currentHand;
         private Card currentCard;
         private object currentBlank;
         private object currentBlank2;
         private Image currentImage;
 
-
+        WaitingRoom TheWR = new WaitingRoom();
+        Memory TheMemory = new Memory();
         Handpcbx[] TheHand = new Handpcbx[5];
         PictureBox[] TheClock = new PictureBox[7];
         Stagepcbx[] TheStage = new Stagepcbx[5];
@@ -64,59 +66,62 @@ namespace Shuffle_2
         {
             InitializeComponent();
             Buildthedeck();
+            BuildtheWR();
         }
-
+        
         private void Buildthedeck()
         {
             currentDeck = Generator.buildNewDeck();
-//            currentHand = Generator.buildNewHand();
-            
         }
 
+        private void BuildtheWR()
+        {
+            currentWR = Generator.NewWR();
+        }
 
         //method called on mouse down to track what area the card is coming from
-/*        private void FindArray(PictureBox pbx)
-        {
-
-            foreach (PictureBox currentPbx in TheHand)
-            {
-                if (currentPbx == pbx)
+        /*        private void FindArray(PictureBox pbx)
                 {
-                    zoneArray = TheHand;
-                    for (int i=0; i<zoneArray.Length; i++)
+
+                    foreach (PictureBox currentPbx in TheHand)
                     {
-                        if (zoneArray[i] == currentPbx) {
-                            index = i;
-                            currentCard = currentHand.getCardAt(index);
-                            currentHand.removeCard(index);
-                            currentBlank = currentHand;
+                        if (currentPbx == pbx)
+                        {
+                            zoneArray = TheHand;
+                            for (int i=0; i<zoneArray.Length; i++)
+                            {
+                                if (zoneArray[i] == currentPbx) {
+                                    index = i;
+                                    currentCard = currentHand.getCardAt(index);
+                                    currentHand.removeCard(index);
+                                    currentBlank = currentHand;
+                                }
+                            }
+                        }
+                    }
+                    foreach (PictureBox currentPbx in TheClock)
+                    {
+                        if (currentPbx == pbx)
+                        {
+                            zoneArray = TheClock;
+                        }
+                    }
+                    foreach (PictureBox currentPbx in TheStage)
+                    {
+                        if (currentPbx == pbx)
+                        {
+                            zoneArray = TheStage;
+                        }
+                    }
+                    foreach (PictureBox currentPbx in Resolution)
+                    {
+                        if (currentPbx == pbx)
+                        {
+                            zoneArray = Resolution;
                         }
                     }
                 }
-            }
-            foreach (PictureBox currentPbx in TheClock)
-            {
-                if (currentPbx == pbx)
-                {
-                    zoneArray = TheClock;
-                }
-            }
-            foreach (PictureBox currentPbx in TheStage)
-            {
-                if (currentPbx == pbx)
-                {
-                    zoneArray = TheStage;
-                }
-            }
-            foreach (PictureBox currentPbx in Resolution)
-            {
-                if (currentPbx == pbx)
-                {
-                    zoneArray = Resolution;
-                }
-            }
-        }
-*/
+        */
         private void Form1_Load(object sender, EventArgs e)
         {
             //pictureBoxBSL.Image = Card
@@ -153,6 +158,9 @@ namespace Shuffle_2
             test[3] = pictureBox3;
             test[4] = pictureBox2;
 
+            TheMemory = membx;
+            TheWR = WaitingRm;
+
             for (int i = 0; i <5; i++)
             {
                 TheHand[i].AllowDrop = true;
@@ -170,7 +178,8 @@ namespace Shuffle_2
                 Resolution[i].AllowDrop = true;
             }
 
-           // wrbx.AllowDrop = true;
+           TheMemory.AllowDrop = true;
+           TheWR.AllowDrop = true;
         }
 
         public void displayDeck()
@@ -258,16 +267,9 @@ namespace Shuffle_2
 
         private void button3_Click(object sender, EventArgs e)
         {
-            /*
-            for (int i = 0; i < 5; i++)
-            {
-                test[i].Image = null;
-            }
-            for (int i = 0; i < currentHand.getCardsleft(); i++)
-            {
-                test[i].Image = currentHand.getCards()[i].getPic();
-            }
-            */
+            currentWR.remove();
+            currentWR.updateImage();
+            WaitingRm.Image = currentWR.Image;
         }
 
         private void pictureBox1_DragEnter(object sender, DragEventArgs e) 
@@ -427,6 +429,44 @@ namespace Shuffle_2
 
         }
 
+        private void WR_DragDrop(object sender, DragEventArgs e)
+        {
+            String lastboxType = lastbox.GetType().Name;
+            Card Addition;
+
+
+            if (lastboxType.Equals("Handpcbx"))
+            {
+
+                Handpcbx lastbox2 = lastbox as Handpcbx;
+                Addition = lastbox2.getCard();
+                lastbox2.setCard(null);
+                currentWR.insertCard(Addition);
+                lastbox2.updateImage();
+                currentWR.updateImage();
+                WaitingRm.Image = currentWR.Image;
+            }
+
+            else if (lastboxType.Equals("Stagepcbx"))
+            {
+
+                Stagepcbx lastbox2 = lastbox as Stagepcbx;
+                Addition = lastbox2.getCard();
+                lastbox2.setCard(null);
+                currentWR.insertCard(Addition);
+                lastbox2.updateImage();
+                currentWR.updateImage();
+                WaitingRm.Image = currentWR.Image;
+            }
+            else
+            {
+
+                throw new Exception("Not implemented");
+
+
+            }
+
+        }
 
 
 
@@ -538,7 +578,32 @@ namespace Shuffle_2
             throw new Exception("No space");
         }
 
-        
+        private void WaitingRm_Click(object sender, EventArgs e)
+        {
+
+            if (pictureBox12.Visible == false)
+            {
+                Waiting_Room.Items.Clear();
+                foreach (Card wrcards in currentWR.getCards())
+                {
+                    
+
+                    Waiting_Room.Items.Add(wrcards.ToString());
+                }
+            }
+            else
+            {
+                pictureBox12.Image = null;
+                pictureBox12.Visible = false;
+            }
+        }
+
+        private void Waiting_Room_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pictureBox12.Visible = true;
+            int index = Waiting_Room.SelectedIndex;
+            pictureBox12.Image = currentWR.Card_Select(index).getPic();
+        }
     }
 }
 

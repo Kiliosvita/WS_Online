@@ -64,7 +64,7 @@
     <Compile Include="Stagepcbx.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="WiatingRoom.cs">
+    <Compile Include="WaitingRoom.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Form1.resx">

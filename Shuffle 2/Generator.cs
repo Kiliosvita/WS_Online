@@ -57,6 +57,13 @@ namespace Shuffle_2
             return aDeck;
         }
 
+        public static WaitingRoom NewWR()
+        {
+            WaitingRoom aWR = new WaitingRoom();
+            
+            return aWR;
+        }
+
         public static Hand buildNewHand()
         {
             return new Hand();

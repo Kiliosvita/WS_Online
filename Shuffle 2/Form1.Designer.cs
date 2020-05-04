@@ -45,17 +45,11 @@
             this.Res3 = new System.Windows.Forms.PictureBox();
             this.Res2 = new System.Windows.Forms.PictureBox();
             this.Res1 = new System.Windows.Forms.PictureBox();
-            this.pictureBoxBSL = new Shuffle_2.Stagepcbx();
-            this.pictureBoxBSR = new Shuffle_2.Stagepcbx();
-            this.pictureBoxCSL = new Shuffle_2.Stagepcbx();
-            this.pictureBoxCSM = new Shuffle_2.Stagepcbx();
-            this.pictureBoxCSR = new Shuffle_2.Stagepcbx();
             this.CxBx = new System.Windows.Forms.PictureBox();
             this.lvl3 = new System.Windows.Forms.PictureBox();
             this.lvl2 = new System.Windows.Forms.PictureBox();
             this.lvl1 = new System.Windows.Forms.PictureBox();
             this.deckbx = new System.Windows.Forms.PictureBox();
-            this.membx = new System.Windows.Forms.PictureBox();
             this.stockBX = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
             this.btnstart = new System.Windows.Forms.Button();
@@ -74,15 +68,21 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.WaitingRm = new Shuffle_2.WaitingRoom();
             this.handpcbx5 = new Shuffle_2.Handpcbx();
             this.handpcbx4 = new Shuffle_2.Handpcbx();
             this.handpcbx3 = new Shuffle_2.Handpcbx();
             this.handpcbx2 = new Shuffle_2.Handpcbx();
             this.handpcbx1 = new Shuffle_2.Handpcbx();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
-            this.WaitingRm = new System.Windows.Forms.PictureBox();
+            this.membx = new Shuffle_2.Memory();
+            this.pictureBoxCSR = new Shuffle_2.Stagepcbx();
+            this.pictureBoxCSM = new Shuffle_2.Stagepcbx();
+            this.pictureBoxCSL = new Shuffle_2.Stagepcbx();
+            this.pictureBoxBSR = new Shuffle_2.Stagepcbx();
+            this.pictureBoxBSL = new Shuffle_2.Stagepcbx();
             ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3)).BeginInit();
@@ -94,17 +94,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Res3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSL)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CxBx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckbx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.membx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBX)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -117,15 +111,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WaitingRm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WaitingRm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSL)).BeginInit();
             this.SuspendLayout();
             // 
             // Waiting_Room
@@ -135,6 +135,7 @@
             this.Waiting_Room.Name = "Waiting_Room";
             this.Waiting_Room.Size = new System.Drawing.Size(104, 95);
             this.Waiting_Room.TabIndex = 1;
+            this.Waiting_Room.SelectedIndexChanged += new System.EventHandler(this.Waiting_Room_SelectedIndexChanged);
             // 
             // Memory
             // 
@@ -315,76 +316,6 @@
             this.Res1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
             this.Res1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
-            // pictureBoxBSL
-            // 
-            this.pictureBoxBSL.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBoxBSL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxBSL.Location = new System.Drawing.Point(274, 165);
-            this.pictureBoxBSL.Name = "pictureBoxBSL";
-            this.pictureBoxBSL.Size = new System.Drawing.Size(76, 95);
-            this.pictureBoxBSL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBSL.TabIndex = 28;
-            this.pictureBoxBSL.TabStop = false;
-            this.pictureBoxBSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
-            this.pictureBoxBSL.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxBSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
-            // 
-            // pictureBoxBSR
-            // 
-            this.pictureBoxBSR.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBoxBSR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxBSR.Location = new System.Drawing.Point(356, 165);
-            this.pictureBoxBSR.Name = "pictureBoxBSR";
-            this.pictureBoxBSR.Size = new System.Drawing.Size(76, 95);
-            this.pictureBoxBSR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxBSR.TabIndex = 29;
-            this.pictureBoxBSR.TabStop = false;
-            this.pictureBoxBSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
-            this.pictureBoxBSR.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxBSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
-            // 
-            // pictureBoxCSL
-            // 
-            this.pictureBoxCSL.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBoxCSL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxCSL.Location = new System.Drawing.Point(233, 37);
-            this.pictureBoxCSL.Name = "pictureBoxCSL";
-            this.pictureBoxCSL.Size = new System.Drawing.Size(76, 95);
-            this.pictureBoxCSL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCSL.TabIndex = 30;
-            this.pictureBoxCSL.TabStop = false;
-            this.pictureBoxCSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
-            this.pictureBoxCSL.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxCSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
-            // 
-            // pictureBoxCSM
-            // 
-            this.pictureBoxCSM.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBoxCSM.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxCSM.Location = new System.Drawing.Point(315, 37);
-            this.pictureBoxCSM.Name = "pictureBoxCSM";
-            this.pictureBoxCSM.Size = new System.Drawing.Size(76, 95);
-            this.pictureBoxCSM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCSM.TabIndex = 31;
-            this.pictureBoxCSM.TabStop = false;
-            this.pictureBoxCSM.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
-            this.pictureBoxCSM.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxCSM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
-            // 
-            // pictureBoxCSR
-            // 
-            this.pictureBoxCSR.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.pictureBoxCSR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxCSR.Location = new System.Drawing.Point(397, 37);
-            this.pictureBoxCSR.Name = "pictureBoxCSR";
-            this.pictureBoxCSR.Size = new System.Drawing.Size(76, 95);
-            this.pictureBoxCSR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBoxCSR.TabIndex = 32;
-            this.pictureBoxCSR.TabStop = false;
-            this.pictureBoxCSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
-            this.pictureBoxCSR.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
-            this.pictureBoxCSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
-            // 
             // CxBx
             // 
             this.CxBx.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -439,17 +370,6 @@
             this.deckbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.deckbx.TabIndex = 37;
             this.deckbx.TabStop = false;
-            // 
-            // membx
-            // 
-            this.membx.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.membx.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.membx.Location = new System.Drawing.Point(551, 64);
-            this.membx.Name = "membx";
-            this.membx.Size = new System.Drawing.Size(76, 95);
-            this.membx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.membx.TabIndex = 39;
-            this.membx.TabStop = false;
             // 
             // stockBX
             // 
@@ -643,6 +563,47 @@
             this.pictureBox4.TabIndex = 69;
             this.pictureBox4.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox1.Location = new System.Drawing.Point(469, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 77;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox12.Location = new System.Drawing.Point(469, 197);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 78;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Visible = false;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // WaitingRm
+            // 
+            this.WaitingRm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.WaitingRm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.WaitingRm.Location = new System.Drawing.Point(551, 197);
+            this.WaitingRm.Name = "WaitingRm";
+            this.WaitingRm.Size = new System.Drawing.Size(76, 95);
+            this.WaitingRm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WaitingRm.TabIndex = 79;
+            this.WaitingRm.TabStop = false;
+            this.WaitingRm.Click += new System.EventHandler(this.WaitingRm_Click);
+            this.WaitingRm.DragDrop += new System.Windows.Forms.DragEventHandler(this.WR_DragDrop);
+            this.WaitingRm.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            // 
             // handpcbx5
             // 
             this.handpcbx5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -718,43 +679,86 @@
             this.handpcbx1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
             this.handpcbx1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.handpcbx_MouseDown);
             // 
-            // pictureBox1
+            // membx
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(469, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(76, 95);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 77;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.membx.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.membx.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.membx.Location = new System.Drawing.Point(551, 64);
+            this.membx.Name = "membx";
+            this.membx.Size = new System.Drawing.Size(76, 95);
+            this.membx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.membx.TabIndex = 39;
+            this.membx.TabStop = false;
             // 
-            // pictureBox12
+            // pictureBoxCSR
             // 
-            this.pictureBox12.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox12.Location = new System.Drawing.Point(469, 197);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(76, 95);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 78;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Visible = false;
+            this.pictureBoxCSR.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBoxCSR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxCSR.Location = new System.Drawing.Point(397, 37);
+            this.pictureBoxCSR.Name = "pictureBoxCSR";
+            this.pictureBoxCSR.Size = new System.Drawing.Size(76, 95);
+            this.pictureBoxCSR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCSR.TabIndex = 32;
+            this.pictureBoxCSR.TabStop = false;
+            this.pictureBoxCSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
+            this.pictureBoxCSR.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.pictureBoxCSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
-            // fileSystemWatcher1
+            // pictureBoxCSM
             // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
+            this.pictureBoxCSM.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBoxCSM.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxCSM.Location = new System.Drawing.Point(315, 37);
+            this.pictureBoxCSM.Name = "pictureBoxCSM";
+            this.pictureBoxCSM.Size = new System.Drawing.Size(76, 95);
+            this.pictureBoxCSM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCSM.TabIndex = 31;
+            this.pictureBoxCSM.TabStop = false;
+            this.pictureBoxCSM.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
+            this.pictureBoxCSM.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.pictureBoxCSM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
-            // WaitingRm
+            // pictureBoxCSL
             // 
-            this.WaitingRm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.WaitingRm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.WaitingRm.Location = new System.Drawing.Point(551, 197);
-            this.WaitingRm.Name = "WaitingRm";
-            this.WaitingRm.Size = new System.Drawing.Size(76, 95);
-            this.WaitingRm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.WaitingRm.TabIndex = 79;
-            this.WaitingRm.TabStop = false;
+            this.pictureBoxCSL.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBoxCSL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxCSL.Location = new System.Drawing.Point(233, 37);
+            this.pictureBoxCSL.Name = "pictureBoxCSL";
+            this.pictureBoxCSL.Size = new System.Drawing.Size(76, 95);
+            this.pictureBoxCSL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxCSL.TabIndex = 30;
+            this.pictureBoxCSL.TabStop = false;
+            this.pictureBoxCSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
+            this.pictureBoxCSL.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.pictureBoxCSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
+            // 
+            // pictureBoxBSR
+            // 
+            this.pictureBoxBSR.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBoxBSR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxBSR.Location = new System.Drawing.Point(356, 165);
+            this.pictureBoxBSR.Name = "pictureBoxBSR";
+            this.pictureBoxBSR.Size = new System.Drawing.Size(76, 95);
+            this.pictureBoxBSR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBSR.TabIndex = 29;
+            this.pictureBoxBSR.TabStop = false;
+            this.pictureBoxBSR.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
+            this.pictureBoxBSR.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.pictureBoxBSR.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
+            // 
+            // pictureBoxBSL
+            // 
+            this.pictureBoxBSL.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.pictureBoxBSL.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBoxBSL.Location = new System.Drawing.Point(274, 165);
+            this.pictureBoxBSL.Name = "pictureBoxBSL";
+            this.pictureBoxBSL.Size = new System.Drawing.Size(76, 95);
+            this.pictureBoxBSL.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxBSL.TabIndex = 28;
+            this.pictureBoxBSL.TabStop = false;
+            this.pictureBoxBSL.DragDrop += new System.Windows.Forms.DragEventHandler(this.stagepcbx_DragDrop);
+            this.pictureBoxBSL.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
+            this.pictureBoxBSL.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stagepcbx_MouseDown);
             // 
             // Form1
             // 
@@ -818,17 +822,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.Res3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Res1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSL)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CxBx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckbx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.membx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBX)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -841,15 +839,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WaitingRm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.WaitingRm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.membx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCSL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBSL)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -878,7 +882,7 @@
         private System.Windows.Forms.PictureBox lvl2;
         private System.Windows.Forms.PictureBox lvl1;
         private System.Windows.Forms.PictureBox deckbx;
-        private System.Windows.Forms.PictureBox membx;
+        private Memory membx;
         private System.Windows.Forms.PictureBox stockBX;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnstart;
@@ -910,7 +914,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
-        private System.Windows.Forms.PictureBox WaitingRm;
+        private WaitingRoom WaitingRm;
     }
 }
 
