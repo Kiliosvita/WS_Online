@@ -58,9 +58,13 @@
     <Compile Include="Handpcbx.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Memory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stagepcbx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WiatingRoom.cs">
       <SubType>Component</SubType>
     </Compile>
     <EmbeddedResource Include="Form1.resx">

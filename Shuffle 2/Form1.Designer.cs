@@ -31,11 +31,6 @@
             this.Waiting_Room = new System.Windows.Forms.ListBox();
             this.Memory = new System.Windows.Forms.ListBox();
             this.Stock = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -60,28 +55,9 @@
             this.lvl2 = new System.Windows.Forms.PictureBox();
             this.lvl1 = new System.Windows.Forms.PictureBox();
             this.deckbx = new System.Windows.Forms.PictureBox();
-            this.wrbx = new System.Windows.Forms.PictureBox();
             this.membx = new System.Windows.Forms.PictureBox();
             this.stockBX = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.bsLeft = new System.Windows.Forms.Label();
-            this.bsRight = new System.Windows.Forms.Label();
-            this.csLeft = new System.Windows.Forms.Label();
-            this.csMid = new System.Windows.Forms.Label();
-            this.csRight = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.lblDeck = new System.Windows.Forms.Label();
-            this.lblHand = new System.Windows.Forms.Label();
             this.btnstart = new System.Windows.Forms.Button();
             this.btnShiftUp1 = new System.Windows.Forms.Button();
             this.btnShiftDown1 = new System.Windows.Forms.Button();
@@ -103,6 +79,10 @@
             this.handpcbx3 = new Shuffle_2.Handpcbx();
             this.handpcbx2 = new Shuffle_2.Handpcbx();
             this.handpcbx1 = new Shuffle_2.Handpcbx();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.WaitingRm = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.c1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c3)).BeginInit();
@@ -124,7 +104,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lvl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckbx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wrbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.membx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBX)).BeginInit();
             this.panel1.SuspendLayout();
@@ -143,6 +122,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WaitingRm)).BeginInit();
             this.SuspendLayout();
             // 
             // Waiting_Room
@@ -150,7 +133,7 @@
             this.Waiting_Room.FormattingEnabled = true;
             this.Waiting_Room.Location = new System.Drawing.Point(633, 197);
             this.Waiting_Room.Name = "Waiting_Room";
-            this.Waiting_Room.Size = new System.Drawing.Size(120, 95);
+            this.Waiting_Room.Size = new System.Drawing.Size(104, 95);
             this.Waiting_Room.TabIndex = 1;
             // 
             // Memory
@@ -168,51 +151,6 @@
             this.Stock.Name = "Stock";
             this.Stock.Size = new System.Drawing.Size(74, 251);
             this.Stock.TabIndex = 3;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(148, 478);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(16, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "-1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(230, 478);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "-1";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(312, 478);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(16, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "-1";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(394, 478);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 13);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "-1";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(476, 478);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "-1";
             // 
             // button1
             // 
@@ -502,17 +440,6 @@
             this.deckbx.TabIndex = 37;
             this.deckbx.TabStop = false;
             // 
-            // wrbx
-            // 
-            this.wrbx.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.wrbx.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.wrbx.Location = new System.Drawing.Point(551, 197);
-            this.wrbx.Name = "wrbx";
-            this.wrbx.Size = new System.Drawing.Size(76, 95);
-            this.wrbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.wrbx.TabIndex = 38;
-            this.wrbx.TabStop = false;
-            // 
             // membx
             // 
             this.membx.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -535,150 +462,6 @@
             this.stockBX.TabIndex = 40;
             this.stockBX.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 13);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "-1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(44, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 13);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "-1";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(66, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 13);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "-1";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(91, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(16, 13);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "-1";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(110, 10);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 13);
-            this.label10.TabIndex = 44;
-            this.label10.Text = "-1";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(572, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(16, 13);
-            this.label11.TabIndex = 47;
-            this.label11.Text = "-1";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(616, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(16, 13);
-            this.label12.TabIndex = 48;
-            this.label12.Text = "-1";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(616, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(16, 13);
-            this.label13.TabIndex = 50;
-            this.label13.Text = "-1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(572, 22);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(16, 13);
-            this.label14.TabIndex = 49;
-            this.label14.Text = "-1";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(696, 9);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(16, 13);
-            this.label15.TabIndex = 52;
-            this.label15.Text = "-1";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(652, 9);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(16, 13);
-            this.label16.TabIndex = 51;
-            this.label16.Text = "-1";
-            // 
-            // bsLeft
-            // 
-            this.bsLeft.AutoSize = true;
-            this.bsLeft.Location = new System.Drawing.Point(1069, 22);
-            this.bsLeft.Name = "bsLeft";
-            this.bsLeft.Size = new System.Drawing.Size(16, 13);
-            this.bsLeft.TabIndex = 54;
-            this.bsLeft.Text = "-1";
-            // 
-            // bsRight
-            // 
-            this.bsRight.AutoSize = true;
-            this.bsRight.Location = new System.Drawing.Point(1151, 22);
-            this.bsRight.Name = "bsRight";
-            this.bsRight.Size = new System.Drawing.Size(16, 13);
-            this.bsRight.TabIndex = 53;
-            this.bsRight.Text = "-1";
-            // 
-            // csLeft
-            // 
-            this.csLeft.AutoSize = true;
-            this.csLeft.Location = new System.Drawing.Point(819, 22);
-            this.csLeft.Name = "csLeft";
-            this.csLeft.Size = new System.Drawing.Size(16, 13);
-            this.csLeft.TabIndex = 56;
-            this.csLeft.Text = "-1";
-            // 
-            // csMid
-            // 
-            this.csMid.AutoSize = true;
-            this.csMid.Location = new System.Drawing.Point(901, 22);
-            this.csMid.Name = "csMid";
-            this.csMid.Size = new System.Drawing.Size(16, 13);
-            this.csMid.TabIndex = 55;
-            this.csMid.Text = "-1";
-            // 
-            // csRight
-            // 
-            this.csRight.AutoSize = true;
-            this.csRight.Location = new System.Drawing.Point(989, 22);
-            this.csRight.Name = "csRight";
-            this.csRight.Size = new System.Drawing.Size(16, 13);
-            this.csRight.TabIndex = 57;
-            this.csRight.Text = "-1";
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(549, 536);
@@ -688,24 +471,6 @@
             this.button4.Text = "Delete";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // lblDeck
-            // 
-            this.lblDeck.AutoSize = true;
-            this.lblDeck.Location = new System.Drawing.Point(696, 314);
-            this.lblDeck.Name = "lblDeck";
-            this.lblDeck.Size = new System.Drawing.Size(41, 13);
-            this.lblDeck.TabIndex = 59;
-            this.lblDeck.Text = "lbldeck";
-            // 
-            // lblHand
-            // 
-            this.lblHand.AutoSize = true;
-            this.lblHand.Location = new System.Drawing.Point(22, 416);
-            this.lblHand.Name = "lblHand";
-            this.lblHand.Size = new System.Drawing.Size(41, 13);
-            this.lblHand.TabIndex = 60;
-            this.lblHand.Text = "lblhand";
             // 
             // btnstart
             // 
@@ -953,11 +718,52 @@
             this.handpcbx1.DragEnter += new System.Windows.Forms.DragEventHandler(this.pictureBox1_DragEnter);
             this.handpcbx1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.handpcbx_MouseDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox1.Location = new System.Drawing.Point(469, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 77;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox12.Location = new System.Drawing.Point(469, 197);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(76, 95);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox12.TabIndex = 78;
+            this.pictureBox12.TabStop = false;
+            this.pictureBox12.Visible = false;
+            // 
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // WaitingRm
+            // 
+            this.WaitingRm.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.WaitingRm.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.WaitingRm.Location = new System.Drawing.Point(551, 197);
+            this.WaitingRm.Name = "WaitingRm";
+            this.WaitingRm.Size = new System.Drawing.Size(76, 95);
+            this.WaitingRm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.WaitingRm.TabIndex = 79;
+            this.WaitingRm.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1353, 629);
+            this.Controls.Add(this.WaitingRm);
+            this.Controls.Add(this.pictureBox12);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.handpcbx5);
             this.Controls.Add(this.handpcbx4);
             this.Controls.Add(this.handpcbx3);
@@ -968,28 +774,9 @@
             this.Controls.Add(this.btnShiftDown1);
             this.Controls.Add(this.btnShiftUp1);
             this.Controls.Add(this.btnstart);
-            this.Controls.Add(this.lblHand);
-            this.Controls.Add(this.lblDeck);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.csRight);
-            this.Controls.Add(this.csLeft);
-            this.Controls.Add(this.csMid);
-            this.Controls.Add(this.bsLeft);
-            this.Controls.Add(this.bsRight);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.stockBX);
             this.Controls.Add(this.membx);
-            this.Controls.Add(this.wrbx);
             this.Controls.Add(this.deckbx);
             this.Controls.Add(this.lvl1);
             this.Controls.Add(this.lvl2);
@@ -1014,11 +801,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.Stock);
             this.Controls.Add(this.Memory);
             this.Controls.Add(this.Waiting_Room);
@@ -1046,7 +828,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.lvl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lvl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.deckbx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.wrbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.membx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stockBX)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -1065,8 +846,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.handpcbx1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.WaitingRm)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -1074,11 +858,6 @@
         private System.Windows.Forms.ListBox Waiting_Room;
         private System.Windows.Forms.ListBox Memory;
         private System.Windows.Forms.ListBox Stock;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -1099,28 +878,9 @@
         private System.Windows.Forms.PictureBox lvl2;
         private System.Windows.Forms.PictureBox lvl1;
         private System.Windows.Forms.PictureBox deckbx;
-        private System.Windows.Forms.PictureBox wrbx;
         private System.Windows.Forms.PictureBox membx;
         private System.Windows.Forms.PictureBox stockBX;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label bsLeft;
-        private System.Windows.Forms.Label bsRight;
-        private System.Windows.Forms.Label csLeft;
-        private System.Windows.Forms.Label csMid;
-        private System.Windows.Forms.Label csRight;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label lblDeck;
-        private System.Windows.Forms.Label lblHand;
         private System.Windows.Forms.Button btnstart;
         private System.Windows.Forms.Button btnShiftUp1;
         private System.Windows.Forms.Button btnShiftDown1;
@@ -1147,6 +907,10 @@
         private Stagepcbx pictureBoxCSL;
         private Stagepcbx pictureBoxCSM;
         private Stagepcbx pictureBoxCSR;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.PictureBox WaitingRm;
     }
 }
 

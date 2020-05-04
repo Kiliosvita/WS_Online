@@ -24,6 +24,7 @@ namespace Shuffle_2
         private object currentBlank2;
         private Image currentImage;
 
+
         Handpcbx[] TheHand = new Handpcbx[5];
         PictureBox[] TheClock = new PictureBox[7];
         Stagepcbx[] TheStage = new Stagepcbx[5];
@@ -168,12 +169,14 @@ namespace Shuffle_2
             {
                 Resolution[i].AllowDrop = true;
             }
+
+           // wrbx.AllowDrop = true;
         }
 
         public void displayDeck()
         {
             // Clear 'Deck' Label
-            lblDeck.Text = "";
+           
 
             // Display Deck
             //for (int i = 0; i < myDeck.Length; i++)
@@ -363,9 +366,6 @@ namespace Shuffle_2
                 pbx.setCard(replacement);
                 lastbox2.updateImage();
                 pbx.updateImage();
-                //  FindArray(pbx);
-
-
             }
             
             else if (lastboxType.Equals("Stagepcbx"))
@@ -377,9 +377,6 @@ namespace Shuffle_2
                 pbx.setCard(replacement);
                 lastbox2.updateImage();
                 pbx.updateImage();
-                //  FindArray(pbx);
-
-
             }
             else
             {
@@ -408,9 +405,6 @@ namespace Shuffle_2
                 pbx.setCard(replacement);
                 lastbox2.updateImage();
                 pbx.updateImage();
-                //  FindArray(pbx);
-
-
             }
 
             else if (lastboxType.Equals("Stagepcbx"))
@@ -422,9 +416,6 @@ namespace Shuffle_2
                 pbx.setCard(replacement);
                 lastbox2.updateImage();
                 pbx.updateImage();
-                //  FindArray(pbx);
-
-
             }
             else
             {
@@ -450,8 +441,7 @@ namespace Shuffle_2
             gameStart = true;   
 
                 // Clear all Labels
-                lblDeck.Text = "";
-                lblHand.Text = "";
+              
             //lblShow.Text = "";
 
             // Set all values for Deck Array from 1 to 50
